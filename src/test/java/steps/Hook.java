@@ -29,7 +29,7 @@ public class Hook extends BaseUtil{
 
 
         //Chrome driver
-        System.setProperty("webdriver.chrome.driver", "C:\\Libs\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/dtsantos/Libs/chromedriver");
         base.Driver = new ChromeDriver();
     }
 
@@ -41,6 +41,7 @@ public class Hook extends BaseUtil{
             System.out.println(scenario.getName());
         }
         System.out.println("Closing the browser : MOCK");
+        base.Driver.quit();
     }
 
 }
